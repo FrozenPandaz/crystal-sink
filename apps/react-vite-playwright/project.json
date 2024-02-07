@@ -1,0 +1,8 @@
+{
+  "name": "react-vite-playwright",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/react-vite-playwright/src",
+  "projectType": "application",
+  "targets": {},
+  "tags": []
+}

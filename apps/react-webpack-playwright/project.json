@@ -1,0 +1,8 @@
+{
+  "name": "react-webpack-playwright",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/react-webpack-playwright/src",
+  "projectType": "application",
+  "targets": {},
+  "tags": []
+}
