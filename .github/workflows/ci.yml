@@ -31,4 +31,5 @@ jobs:
       - uses: nrwl/nx-set-shas@v4
 
       - run: npx nx-cloud record -- nx format:check
-      - run: npx nx affected -t lint test build e2e-ci
+      - run: npx nx affected -t lint test build build-storybook
+      - run: npx nx affected -t e2e-ci --parallel 1

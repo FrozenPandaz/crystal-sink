@@ -1,0 +1,8 @@
+{
+  "name": "react-vitest",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/react-vitest/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {}
+}

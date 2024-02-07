@@ -14,7 +14,13 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@crystal-sink/react-jest": ["libs/react-jest/src/index.ts"],
+      "@crystal-sink/react-vitest": ["libs/react-vitest/src/index.ts"],
+      "@crystal-sink/react-vitest-storybook": [
+        "libs/react-vitest-storybook/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
