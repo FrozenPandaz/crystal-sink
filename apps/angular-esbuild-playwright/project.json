@@ -1,0 +1,68 @@
+{
+  "name": "angular-esbuild-playwright",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "crystal-sink",
+  "sourceRoot": "apps/angular-esbuild-playwright/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:application",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/angular-esbuild-playwright",
+        "index": "apps/angular-esbuild-playwright/src/index.html",
+        "browser": "apps/angular-esbuild-playwright/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/angular-esbuild-playwright/tsconfig.app.json",
+        "assets": [
+          "apps/angular-esbuild-playwright/src/favicon.ico",
+          "apps/angular-esbuild-playwright/src/assets"
+        ],
+        "styles": ["apps/angular-esbuild-playwright/src/styles.css"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "optimization": false,
+          "extractLicenses": false,
+          "sourceMap": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "angular-esbuild-playwright:build:production"
+        },
+        "development": {
+          "buildTarget": "angular-esbuild-playwright:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "buildTarget": "angular-esbuild-playwright:build"
+      }
+    }
+  }
+}

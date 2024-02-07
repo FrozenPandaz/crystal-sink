@@ -1,0 +1,7 @@
+{
+  "name": "nuxt-playwright",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/nuxt-playwright/src",
+  "targets": {}
+}

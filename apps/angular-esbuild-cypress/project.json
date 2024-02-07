@@ -1,0 +1,75 @@
+{
+  "name": "angular-esbuild-cypress",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "crystal-sink",
+  "sourceRoot": "apps/angular-esbuild-cypress/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:application",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/angular-esbuild-cypress",
+        "index": "apps/angular-esbuild-cypress/src/index.html",
+        "browser": "apps/angular-esbuild-cypress/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/angular-esbuild-cypress/tsconfig.app.json",
+        "assets": [
+          "apps/angular-esbuild-cypress/src/favicon.ico",
+          "apps/angular-esbuild-cypress/src/assets"
+        ],
+        "styles": ["apps/angular-esbuild-cypress/src/styles.css"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "optimization": false,
+          "extractLicenses": false,
+          "sourceMap": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "angular-esbuild-cypress:build:production"
+        },
+        "development": {
+          "buildTarget": "angular-esbuild-cypress:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "buildTarget": "angular-esbuild-cypress:build"
+      }
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "angular-esbuild-cypress:build",
+        "staticFilePath": "dist/apps/angular-esbuild-cypress/browser"
+      }
+    }
+  }
+}

@@ -44,3 +44,11 @@ Thumbs.db
 .next
 
 storybook-static
+.angular
+
+# Nuxt dev/build outputs
+.output
+.data
+.nuxt
+.nitro
+.cache

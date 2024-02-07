@@ -1,0 +1,9 @@
+{
+  "name": "angular-esbuild-cypress-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/angular-esbuild-cypress-e2e/src",
+  "targets": {},
+  "tags": [],
+  "implicitDependencies": ["angular-esbuild-cypress"]
+}

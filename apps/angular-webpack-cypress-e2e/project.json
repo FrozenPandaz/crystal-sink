@@ -1,0 +1,9 @@
+{
+  "name": "angular-webpack-cypress-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/angular-webpack-cypress-e2e/src",
+  "targets": {},
+  "tags": [],
+  "implicitDependencies": ["angular-webpack-cypress"]
+}
