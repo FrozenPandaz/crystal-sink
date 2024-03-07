@@ -1,0 +1,7 @@
+{
+  "name": "next-playwright-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/next-playwright-e2e/src",
+  "targets": {},
+  "implicitDependencies": ["next-playwright"]
+}

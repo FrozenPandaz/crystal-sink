@@ -1,0 +1,8 @@
+{
+  "name": "next-cypress",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/next-cypress",
+  "projectType": "application",
+  "targets": {},
+  "tags": []
+}

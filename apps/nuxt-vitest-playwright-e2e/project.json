@@ -1,0 +1,7 @@
+{
+  "name": "nuxt-vitest-playwright-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/nuxt-vitest-playwright-e2e/src",
+  "targets": {},
+  "implicitDependencies": ["nuxt-vitest-playwright"]
+}

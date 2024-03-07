@@ -1,0 +1,8 @@
+{
+  "name": "react-vite-cypress",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/react-vite-cypress/src",
+  "projectType": "application",
+  "targets": {},
+  "tags": []
+}
